@@ -1,0 +1,71 @@
+<div class="admin">
+    <h1>Admin Page</h1><br/><br/>
+
+    <button type="button" class="btn btn-primary btn-lg" value="Total Stock" (click)="handleStock()">Total Stock</button><br/><br/>
+
+    <button type="button" class="btn btn-primary btn-lg" value="Blood Requests" (click)="handlebloodrequests()">Blood Requests</button><br/><br/>
+    <button type="button" class="btn btn-primary btn-lg" value="Blood Donations" (click)="handleblooddonations()">Blood Donations</button><br/><br/>
+
+    <div *ngIf="stk">
+        <br/><br/>
+        <table style="width:50%">
+        <tr>
+            
+            <td>Blood Group</td>
+            <td>Units</td>
+        </tr>
+        <tr  *ngFor="let s of stock">
+            <td>{{s.bloodgroup}}</td>
+            <td>{{s.units}}</td>
+        </tr>
+    </table>
+   </div>
+
+    <div *ngIf="req">
+        <br/><br/>
+        <table style="width:100%">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Blood Group</td>
+            <td>Units</td>
+        </tr>
+    
+        <tr  *ngFor="let request of bloodrequests;let s of statusCheck">
+            <td>{{request.reqid}}</td>
+            <td>{{request.name}}</td>
+            <td>{{request.age}}</td>
+            <td>{{request.bloodgroup}}</td>
+            <td>{{request.units}}</td>
+            <div *ngFor="let s of statusCheck">
+                <div *ngIf="request.reqid==s.id">
+            <td *ngIf='s.curstatus==="Pending"'><button value="Accepted" (click)="handleAccept(request,$event)">{{getButtonText(request.reqid)}}</button>    <button value="Declined" (click)="handleDecline(request)">Decline</button><td></td></div>    
+            </div>
+        </tr>
+    </table>
+   </div>
+
+   <div *ngIf="don">
+    <br/><br/>
+    <table style="width:100%">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Blood Group</td>
+        <td>Units</td>
+       
+    </tr>
+        <tr *ngFor="let don of blooddonations">
+            <td>{{don.donid}}</td>
+            <td>{{don.name}}</td>
+            <td>{{don.age}}</td>
+            <td>{{don.bloodgroup}}</td>
+            <td>{{don.units}}</td>
+            
+        </tr>
+    </table>
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="login">
+    <div>
+        <h1>User Login</h1>
+    <label>Username:<br/></label>
+    <input type="text" class="form-control" value="user[0]" [(ngModel)]="user[0]"/><br/>
+    <label>Password:<br/></label>
+    <input type="password" class="form-control" value="user[1]" [(ngModel)]="user[1]"/><br/>
+    <button type="button" class="btn btn-primary btn-lg" (click)="handleSubmit()">Login</button>
+    </div>
+    <div>
+        <h1>Admin Login</h1>
+        <label>Username:<br/></label>
+        <input type="text" class="form-control" value="admin[0]" [(ngModel)]="admin[0]"/><br/>
+        <label>Password:<br/></label>
+        <input type="password" class="form-control" value="admin[1]" [(ngModel)]="admin[1]"/><br/>
+        <button type="button" class="btn btn-primary btn-lg" (click)="handleAdmin()">Login</button>
+    </div>
+</div>
+{{message}}

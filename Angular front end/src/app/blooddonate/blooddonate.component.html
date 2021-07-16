@@ -1,0 +1,19 @@
+<div class="blooddonate">
+    <h1>Donate Blood</h1>
+    <form>
+        <label>Name:</label><br/>
+        <input type="text" class="form-control" name="username" value="blooddonate.name" [(ngModel)]="blooddonate.name"/><br/>
+        <label>Age:</label><br/>
+        <input type="text" class="form-control" name="age" value="blooddonate.age" [(ngModel)]="blooddonate.age"/><br/>
+        <label>Blood Group:</label><br/>
+        <input type="radio"  name="bloodgroup" value="A+" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">A+ <br/>
+        <input type="radio" name="bloodgroup" value="A-" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">A- <br/>
+        <input type="radio" name="bloodgroup" value="B+" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">B+ <br/>
+        <input type="radio" name="bloodgroup" value="B-" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">B- <br/>
+        <input type="radio" name="bloodgroup" value="O+" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">O+ <br/>
+        <input type="radio" name="bbloogroup" value="AB-" [(ngModel)]="blooddonate.bloodgroup" (change)="radioChangeHandler($event)">AB- <br/>
+        <label>Number of Units:</label><br/>
+        <input type="text" class="form-control" name="units" value="blooddonate.units" [(ngModel)]="blooddonate.units"/><br/>
+        <button type="button" class="btn btn-primary btn-lg" (click)="handleSubmit()">Donate</button>   
+    </form>
+</div>

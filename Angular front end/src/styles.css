@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgba(0,0,0,0.2);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home h1,img{
+    text-align: center;
+}
+
+.home button{
+    margin-left:650px;
+    text-align: center;
+    width:15%;
+}
+
+
+
+.user,.login,.bloodrequest,.blooddonate{
+    text-align: center;
+}
+
+.user input[type=text],.user input[type=password],.login input[type=text],.login input[type=password],.blooddonate input[type=text],.bloodrequest input[type=text]{
+    width:30%;
+    margin-left:550px;
+    border-bottom:1px solid black;
+}
+
+.user button,.login button,.blooddonate button,.bloodrequest button,.admin button{
+    width:15%;
+}
+
+.bloodbank img{
+    height:300px;
+    width:300px;
+    display: inline;
+    margin-left:50px;
+}
+
+.bloodbank button{
+    width:15%;
+    margin-top:20px;
+    margin-left:650px;
+}
+
+.admin{
+    text-align: center;
+}

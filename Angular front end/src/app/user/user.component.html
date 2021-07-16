@@ -1,0 +1,18 @@
+<div class="user">
+    <h1>Register Here</h1>
+    <form>
+        <div class="form-group">
+        <label>Enter your Name:</label>
+        <input type="text" name="username" class="form-control" value="user.name" [(ngModel)]="user.name"/><br/>
+        <label>Enter your Age:</label>
+        <input type="text" name="age" class="form-control" value="user.age" [(ngModel)]="user.age"/><br/>
+        <label>Select Gender:</label>
+        <input type="radio" name="gender" class="form-check-input" value="Male" [(ngModel)]="user.gender" (change)="radioChangeHandler($event)">Male <br/>
+        <input type="radio" name="gender" class="form-check-input" value="female" [(ngModel)]="user.gender" (change)="radioChangeHandler($event)">Female <br/>
+        <label>Enter Password:</label>
+        <input type="password" name="password" class="form-control" value="user.password" [(ngModel)]="user.password"/><br/>
+        <button type="button" class="btn btn-primary btn-lg" (click)="handleSubmit()">Register</button>   
+        </div>
+    </form>
+    
+</div>
